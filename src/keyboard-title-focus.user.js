@@ -27,7 +27,7 @@
 // @match           https://stackoverflowteams.com/c/*
 // @namespace       https://github.com/PurpleMagick/
 // @run-at          document-end
-// @version         1.0.0
+// @version         1.1.0
 // ==/UserScript==
 (() => {
 	"use strict";
@@ -44,7 +44,7 @@
 		if (!keyboardSelectedContainer)
 			return;
 
-		keyboardSelectedContainer.querySelector("a.s-link, a.answer-hyperlink")?.focus();
+		keyboardSelectedContainer.querySelector("a.s-link, a.answer-hyperlink, h3 > a")?.focus();
 	};
 
 	const observer = new MutationObserver(callback);
